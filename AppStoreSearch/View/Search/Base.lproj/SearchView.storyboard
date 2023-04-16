@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rs8-R3-OCH">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jev-Ci-grl">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rs8-R3-OCH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="R22-IN-KSJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Eau-LP-Hmq" kind="relationship" relationship="viewControllers" id="dYC-II-qOD"/>
+                        <segue destination="BDp-Gu-cfA" kind="relationship" relationship="viewControllers" id="rxp-Lu-Qw9"/>
+                        <segue destination="eQn-Ij-vbM" kind="relationship" relationship="viewControllers" id="Gec-Yl-QUX"/>
+                        <segue destination="BTz-BN-Bh0" kind="relationship" relationship="viewControllers" id="zdM-K1-Zj1"/>
+                        <segue destination="5Lf-74-9Nm" kind="relationship" relationship="viewControllers" id="OWs-Z6-aVg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pnt-97-VLC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="325"/>
+        </scene>
+        <!--검색-->
+        <scene sceneID="aGj-NT-cDg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Lf-74-9Nm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass" catalog="system" id="oPl-5c-MVl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="lTD-99-gRv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LP2-yK-lbn" kind="relationship" relationship="rootViewController" id="I0n-Xn-B8E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qcB-H9-GGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1962.5954198473282" y="325.35211267605638"/>
+        </scene>
+        <!--검색-->
+        <scene sceneID="PkI-ay-yif">
+            <objects>
+                <tableViewController id="LP2-yK-lbn" customClass="SearchTableViewController" customModule="AppStoreSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="qwX-zt-ISw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="g2X-io-mgk">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 검색어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGX-yx-pq0">
+                                    <rect key="frame" x="15" y="8.9999999999999982" width="100" height="26.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="xGX-yx-pq0" firstAttribute="leading" secondItem="g2X-io-mgk" secondAttribute="leading" constant="15" id="OTv-sT-BgW"/>
+                                <constraint firstItem="xGX-yx-pq0" firstAttribute="centerY" secondItem="g2X-io-mgk" secondAttribute="centerY" id="bPQ-iP-1RL"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Spd-Ml-duq" style="IBUITableViewCellStyleDefault" id="iCk-UG-GGq">
+                                <rect key="frame" x="0.0" y="94" width="393" height="47.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iCk-UG-GGq" id="QK8-MC-u17">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="47.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="term" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Spd-Ml-duq">
+                                            <rect key="frame" x="20" y="0.0" width="353" height="47.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                            <color key="textColor" systemColor="linkColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LP2-yK-lbn" id="Uat-3f-1AI"/>
+                            <outlet property="delegate" destination="LP2-yK-lbn" id="A6T-rp-BJa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="검색" id="p7V-E2-6to"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2P-4f-gGo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2795" y="325"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OiU-mt-RD8">
+            <objects>
+                <viewController storyboardIdentifier="NetworkNotConnectViewController" id="62j-kP-aIw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ri4-0P-fTX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Store에 접근하려면 셀룰러 데이터를 켜거나 Wi-Fi를 사용하십시오." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8x-Ca-AlP">
+                                <rect key="frame" x="20" y="372.33333333333331" width="353" height="107.66666666666669"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XkS-6G-hp9"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="N8x-Ca-AlP" firstAttribute="centerY" secondItem="Ri4-0P-fTX" secondAttribute="centerY" id="0ef-Nd-pUb"/>
+                            <constraint firstAttribute="trailing" secondItem="N8x-Ca-AlP" secondAttribute="trailing" constant="20" id="7Qq-HI-sPu"/>
+                            <constraint firstItem="N8x-Ca-AlP" firstAttribute="centerX" secondItem="Ri4-0P-fTX" secondAttribute="centerX" id="StO-EM-Yfx"/>
+                            <constraint firstItem="N8x-Ca-AlP" firstAttribute="leading" secondItem="Ri4-0P-fTX" secondAttribute="leading" constant="20" id="mDY-Mq-nJw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Za1-vH-3c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963" y="1110"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="QYf-Wr-YNN">
+            <objects>
+                <viewController id="eQn-Ij-vbM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1u-Vj-Xeu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ho2-hl-4Wj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="square.stack.3d.up.fill" catalog="system" id="GxR-jW-jlu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GI4-pi-bji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-642"/>
+        </scene>
+        <!--아케이드-->
+        <scene sceneID="kWT-Ud-fOi">
+            <objects>
+                <viewController id="BTz-BN-Bh0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9z1-Nr-KKv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ONY-Rc-BOr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="아케이드" image="arcade" id="j3z-0L-Z74"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVq-Ni-Nz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2550" y="-642"/>
+        </scene>
+        <!--게임-->
+        <scene sceneID="rzs-Cd-3ol">
+            <objects>
+                <viewController id="BDp-Gu-cfA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="789-rC-5bV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MoI-b8-FwC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="게임" image="rocketImage" id="3Oi-7w-3EJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EaP-wV-z8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="-642"/>
+        </scene>
+        <!--투데이-->
+        <scene sceneID="WFm-70-7hc">
+            <objects>
+                <viewController id="Eau-LP-Hmq" customClass="ViewController" customModule="AppStoreSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G7h-Fq-a58">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Idl-bb-EMI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="투데이" image="doc.text.image" catalog="system" id="2Kh-NS-vfh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vk4-Uo-zuc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="250" y="-642"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arcade" width="24" height="24"/>
+        <image name="doc.text.image" catalog="system" width="115" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="rocketImage" width="24" height="24"/>
+        <image name="square.stack.3d.up.fill" catalog="system" width="128" height="125"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
